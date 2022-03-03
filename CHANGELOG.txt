@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------------------------
+Tyre Deg Calculator - Changelog
+--------------------------------------------------------------------------------------------------------
+
+ - v1.0 - Initial release
+	- Basic UI development of MainWindow
+
+ - v1.2 - Created TyresModel class with properties of the tyres
+	- Implemented XMLSerializer to deserialize TyresXML.xml
+	- Display all the tyre names in the comboxes
+
+ - v1.3 - Added LINQ expression to only display tyres that are relavent for the combobox
+	  i.e. Front left tyres only display in the front left combobox and front right tyres
+	  only display in the front right combobox etc.
+	- Created TrackModel class with properties of the track
+	- Used StreamReader to read data from TrackDegradationCoefficients.txt
+	- Stored values in a List<> according to their delimiters i.e. "|" and ","
+	- Displayed the Track Names in the TrackName combobox
+
+ - v1.4 - Created WeatherModel class
+	- Implemented getWeather() method to call the OpenWeatherMap API
+	- Fetches weather from a static location that is stored in a variable
+
+ - v1.5 - Fetches weather according to the track chosen in the combobox by using the location
+	  from TrackDegradationCoefficients.txt
+
+ - v1.6 - Created method calculateRange(values) to calculate the range
+	- Created method calculateAve(values) to calculate average
+	- Created calculatePointTyreDeg(trackdegPoin, tyre) to calculate PointTyreDeg
+	- Created calculations() to run all the other calculation methods
+
+ - v1.7 - Display results to UI textboxes
+	- Add background colour of textboxes according to value and key
+
+ - v1.8 - Added SplashScreen
+	- Added MainWindow background watermark
+	- Added <ScrollViewer> to <Grid> in XAML
+	- Further UI enhancements
+
+ - v1.9 - Performace Improvements by adding asyncronous methods for fetching the weather and performing 
+	  calculations
+	- Added wait cursor when doing calculations to give appropriate user feedback
+	- Added README.txt to project files
+	- Added CHANGELOG.txt to projet files
+
+--------------------------------------------------------------------------------------------------------
